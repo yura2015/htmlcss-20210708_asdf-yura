@@ -1,0 +1,49 @@
+
+
+body {
+    color: White;
+    font-size: 1.2em;
+    font-family: areal, verdana, sans-serif;
+    margin: 0px;
+}
+a 
+{
+    color:White;
+}
+header {
+    text-align: center;
+    padding: 0px;
+    background-color: red;
+}
+header h1 {
+    margin:0;
+    padding: 10px;
+}
+nav {
+    background-color:orange;
+    height: 3em;
+    line-height: 3em;
+    width:100%;
+}
+
+nav ol ul li {
+    display: inline;
+    margin: 5px;
+    padding: 0;
+} 
+main {
+    margin: 0px;
+    padding: 10px;
+    background-color: green;
+}
+article {
+    margin: 5px;
+    padding: 10px;
+    background-color: blue;
+}
+footer {
+    padding: 10px;
+    background-color: #D514B8;
+    font-size: 1.2em;
+    text-align: center;
+}
