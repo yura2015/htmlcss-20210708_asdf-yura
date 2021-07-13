@@ -1,1 +1,87 @@
 /* Стилизация кнопки */
+
+.button
+{
+    padding: 0;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    background: none;
+    width: 189px;
+    height: 48px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: opacity 200ms ease-in-out, background 200ms ease-in-out;
+}
+.button__text 
+{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    
+}
+.button_primary_default
+{
+    color: var(--white);
+    background-color: var(--primary);
+}
+.button_primary_hover 
+{
+    color: var(--white);
+    background-color: var(--primary-darken);
+}
+
+.button_primary_disable 
+{
+    color: var(--white);
+    background-color: var(--primary);
+    opacity: 0.5;
+    cursor: default;
+}
+
+.button_secondary_default
+{
+    color: var(--white);
+    background-color: var(--secondary);
+}
+.button_secondary_hover 
+{
+    color: var(--white);
+    background-color: var(--secondary-darken);
+    
+}
+
+.button_secondary_disable 
+{
+    color: var(--white);
+    background-color: var(--secondary);
+    opacity: 0.5;
+    cursor: default;
+}
+
+.button_alternate_default
+{
+    color: var(--black);
+    border: 1px solid var(--grey-3);
+    
+}
+.button_alternate_hover 
+{
+    color:black;
+    border: 1px solid var(--black);
+}
+
+.button_alternate_disable 
+{
+    color: var(--black);
+    border: 1px solid var(--grey-3);
+    opacity: 0.5;
+    cursor: default;
+}
