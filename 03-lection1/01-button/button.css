@@ -13,9 +13,6 @@
     cursor: pointer;
     border-radius: 8px;
     transition: opacity 200ms ease-in-out, background 200ms ease-in-out;
-}
-.button__text 
-{
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -27,61 +24,64 @@
     text-shadow: none;
     
 }
-.button_primary_default
+.button_primary
 {
     color: var(--white);
     background-color: var(--primary);
 }
-.button_primary_hover 
+.button_primary:hover 
 {
     color: var(--white);
     background-color: var(--primary-darken);
 }
 
-.button_primary_disable 
+.button_primary:disabled
 {
     color: var(--white);
     background-color: var(--primary);
     opacity: 0.5;
     cursor: default;
+    pointer-events: none;
 }
 
-.button_secondary_default
+.button_secondary
 {
     color: var(--white);
     background-color: var(--secondary);
 }
-.button_secondary_hover 
+.button_secondary:hover 
 {
     color: var(--white);
     background-color: var(--secondary-darken);
     
 }
 
-.button_secondary_disable 
+.button_secondary:disabled 
 {
     color: var(--white);
     background-color: var(--secondary);
     opacity: 0.5;
     cursor: default;
+    pointer-events: none;
 }
 
-.button_alternate_default
+.button_alternate
 {
     color: var(--black);
     border: 1px solid var(--grey-3);
     
 }
-.button_alternate_hover 
+.button_alternate:hover 
 {
     color:black;
     border: 1px solid var(--black);
 }
 
-.button_alternate_disable 
+.button_alternate:disabled 
 {
     color: var(--black);
     border: 1px solid var(--grey-3);
     opacity: 0.5;
     cursor: default;
+    pointer-events: none;
 }
