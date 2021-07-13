@@ -31,14 +31,11 @@
 }
 .button_primary:hover 
 {
-    color: var(--white);
     background-color: var(--primary-darken);
 }
 
 .button_primary:disabled
 {
-    color: var(--white);
-    background-color: var(--primary);
     opacity: 0.5;
     cursor: default;
     pointer-events: none;
@@ -51,15 +48,11 @@
 }
 .button_secondary:hover 
 {
-    color: var(--white);
     background-color: var(--secondary-darken);
-    
 }
 
 .button_secondary:disabled 
 {
-    color: var(--white);
-    background-color: var(--secondary);
     opacity: 0.5;
     cursor: default;
     pointer-events: none;
@@ -73,14 +66,11 @@
 }
 .button_alternate:hover 
 {
-    color:black;
     border: 1px solid var(--black);
 }
 
 .button_alternate:disabled 
 {
-    color: var(--black);
-    border: 1px solid var(--grey-3);
     opacity: 0.5;
     cursor: default;
     pointer-events: none;
