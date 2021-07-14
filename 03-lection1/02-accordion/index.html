@@ -2,16 +2,27 @@
 <!-- Страница с аккордеоном -->
 <html lang="ru">
     <head>
+        <link rel="stylesheet" href="../../assets/css/normalize.css">
         <link rel="stylesheet" href="../../assets/css/main.css">
         <link rel="stylesheet" href="./accordion.css">
     </head>
     <body>
-        <details>
+        <details class="accordion__item"  open>
             <summary>
-                Accordion item
+                Accordion item 1
             </summary>
             <p>
-                Hidden content
+                1. Обратите внимание, что `summary` по-умолчанию имеет `display: inline`. Поменяйте, если это необходимо.
+
+                2. За стрелочку в `summary` отвечает псевдоэлемент `::-webkit-details-marker`. Так как пока что не изучали, как прибивать элементы к краям контейнера, то скрываем нативную так, а свою сделаем позже:
+            </p>
+        </details>
+        <details class="accordion__item">
+            <summary>
+                Accordion item 2
+            </summary>
+            <p>
+                В директории компонента лежат стили, картинки, которые использует только он, возможно, что-то еще, специфичное именно для него.
             </p>
         </details>
     </body>
