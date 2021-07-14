@@ -1,10 +1,10 @@
 /* Стилизация аккордеона */
 
-summary::-webkit-details-marker {
+.accordion::-webkit-details-marker {
     display: none;
 }
 
-summary {
+.accordion {
     display: block;
 }
 
