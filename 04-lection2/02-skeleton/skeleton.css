@@ -1,10 +1,12 @@
 
-.container {
+.skeleton 
+{
+    box-sizing: border-box;
     margin:0px;
     border: 1px solid var(--grey-3);
     border-radius: 8px;
 }
-.container-column {
+.skeleton-column {
     display: flex; 
     flex-direction:column;
     justify-content: space-evenly;
@@ -13,7 +15,7 @@
     margin:24px;
 }
 
-.container-row {
+.skeleton-row {
     display: flex; 
     flex-direction:row;
     justify-content:start;
@@ -22,28 +24,28 @@
     max-width: 100%;
     margin:0px;
 }
-.horizontal-gradient {
+.skeleton-horizontal-gradient {
     background: linear-gradient(to right, var(--grey-2) 0%, var(--grey-5) 33.33%, var(--grey-6)52.08%, var(--grey-7) 73.96%, var(--grey-2) 100% );
   }
   
-  .rectangle-min {
+ .skeleton__rectangle-min {
     flex: 0 1 20px;
     width:calc(100% * 0.33);
     height:20px;
     margin:5px;
 }
-.rectangle-mid {
+.skeleton__rectangle-mid {
     flex: 0 1 20px;
     max-width:calc(100% * 0.5);
     height:20px;
     margin:5px;
 }
-.rectangle-big {
+.skeleton__rectangle-big {
     flex: 0 1 20px;
     max-width: 100%;
     margin:5px;
 }
-.circle {
+.skeleton__circle {
     flex: 0 0 auto;
     flex-basis: 64px;
     height: 64px;
