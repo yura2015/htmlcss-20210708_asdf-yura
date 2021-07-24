@@ -1,0 +1,26 @@
+.card  {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    flex-basis: 350px;
+    width:350;
+    border-radius: 12px;
+    background-color: var( --white);
+    box-shadow: 0px 2px 4px rgba(33, 36, 41, 0.05);
+    height: 367px;
+}
+
+.card__title {
+
+    width:150;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--black);
+    text-align: center;
+    margin: 0 auto;
+    vertical-align: bottom;
+    margin-bottom: 30px;
+}
