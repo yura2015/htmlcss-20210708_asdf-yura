@@ -1,11 +1,101 @@
 <!DOCTYPE html>
-<!-- Страница с кнопкой переключения -->
 <html lang="ru">
     <head>
+        <link rel="stylesheet" href="../../assets/css/normalize.css">
         <link rel="stylesheet" href="../../assets/css/main.css">
         <link rel="stylesheet" href="./toggler.css">
     </head>
     <body>
+        <div >
+            <label class='toggler'>
+                <input type="checkbox" class="toggler__input" >
+                <div class="toggler__state" >
+                    <div class="toggler__control" >
+                        <svg class="toggler__icon-off-1" width="52" height="28" viewBox="0 0 52 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="51" height="27" rx="13.5" fill="white" stroke="#DDE2E5"/>
+                        </svg>
+                   
+                        <svg class="toggler__icon-off-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="12" fill="#DDE2E5"/>
+                            </svg>
+                            
+                        <svg class="toggler__icon-on-1" width="52" height="28" viewBox="0 0 52 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="51" height="27" rx="13.5" fill="#4263EB" stroke="#4263EB"/>
+                        </svg>
+                        <svg class="toggler__icon-on-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="12" fill="white"/>
+                        </svg>
+                        <svg class="toggler__icon-disabled-1" width="52" height="28" viewBox="0 0 52 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="52" height="28" rx="14" fill="#DDE2E5"/>
+                        </svg>
+                        <svg class="toggler__icon-disabled-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect opacity="0.25" width="24" height="24" rx="12" fill="#ACB5BD"/>
+                        </svg>
+                                
+                            
+                    </div>
+                    <p class="toggler__legend">Default toggler button</p>
 
+                </div>
+            </label>
+
+            <label class='toggler'>
+                <input type="checkbox" class="toggler__input" checked >
+                <div class="toggler__state" >
+                    <div class="toggler__control" >
+                        <svg class="toggler__icon-off-1" width="52" height="28" viewBox="0 0 52 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="51" height="27" rx="13.5" fill="white" stroke="#DDE2E5"/>
+                        </svg>
+                        <svg class="toggler__icon-off-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="12" fill="#DDE2E5"/>
+                        </svg>
+                        <svg class="toggler__icon-on-1" width="52" height="28" viewBox="0 0 52 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="51" height="27" rx="13.5" fill="#4263EB" stroke="#4263EB"/>
+                        </svg>
+                        <svg class="toggler__icon-on-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="12" fill="white"/>
+                        </svg>
+                        <svg class="toggler__icon-disabled-1" width="52" height="28" viewBox="0 0 52 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="52" height="28" rx="14" fill="#DDE2E5"/>
+                        </svg>
+                        <svg class="toggler__icon-disabled-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect opacity="0.25" width="24" height="24" rx="12" fill="#ACB5BD"/>
+                        </svg>
+                     </div>
+                     <p class="toggler__legend">Default toggler button</p>
+
+                </div>
+            </label>
+            
+            <label class='toggler'>
+                <input type="checkbox" class="toggler__input" disabled >
+                <div class="toggler__state" >
+                    <div class="toggler__control" >
+                        <svg class="toggler__icon-off-1" width="52" height="28" viewBox="0 0 52 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="51" height="27" rx="13.5" fill="white" stroke="#DDE2E5"/>
+                        </svg>
+                        <svg class="toggler__icon-off-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="12" fill="#DDE2E5"/>
+                        </svg>
+                        <svg class="toggler__icon-on-1" width="52" height="28" viewBox="0 0 52 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="51" height="27" rx="13.5" fill="#4263EB" stroke="#4263EB"/>
+                        </svg>
+                        <svg class="toggler__icon-on-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="24" height="24" rx="12" fill="white"/>
+                        </svg>
+                        <svg class="toggler__icon-disabled-1" width="52" height="28" viewBox="0 0 52 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="52" height="28" rx="14" fill="#DDE2E5"/>
+                        </svg>
+                        <svg class="toggler__icon-disabled-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect opacity="0.25" width="24" height="24" rx="12" fill="#ACB5BD"/>
+                        </svg>
+                     </div>
+                     <p class="toggler__legend">Default toggler button</p>
+
+                </div>
+            </label>
+            
+        </div>
+       
     </body>
 </html>
