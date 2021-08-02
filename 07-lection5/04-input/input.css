@@ -12,6 +12,15 @@
     background: var(--white);
     border: 1px solid var(--grey-2);
     border-radius: 8px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    padding-left: 24px;
+    padding-right: 60px;
+    align-items: center;
+    line-height: 26px;
+    color: var(--grey-4);
 }
 
 .input__control::placeholder {
@@ -19,7 +28,7 @@
  }
 
 .input__control-invalid {
-    border: 1px solid #F03D3E;
+    border: 1px solid var(--red);
     box-shadow: 0px 1px 1px rgba(240, 61, 62, 0.1);
 }
 
