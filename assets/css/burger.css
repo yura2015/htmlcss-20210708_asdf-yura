@@ -1,8 +1,9 @@
 .burger__menu{
     padding: 20px;
     background: var(--white);
-    position:fixed;
-    top:0;
+   /* position:fixed;*/
+    position:relative;
+    top:0px;
     left:0;
     width:100vw;
     height:100vw;
@@ -12,7 +13,7 @@
 }
 
 .burger__menu-open {
-    
+    display:block;
     margin: 20px;
     color: var(--black);
   } 
@@ -35,6 +36,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+    z-index: 5;
 }
 .burger__container-title {
     display: block;
