@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <link rel="stylesheet" href="../assets/css/normalize.css">
+        <link rel="stylesheet" href="../assets/css/main.css">
+        <link rel="stylesheet" href="../assets/css/template.css">
+        <link rel="stylesheet" href="../assets/css/burger.css">
+
+        <link rel="stylesheet" href="../05-lection3/03-calendar/calendar.css">
+        
+        <style>
+            html {
+                height: 100%;
+            }
+            body {
+                margin: 0;
+                height: 100%;
+            }
+            
+            
+        </style> 
+    </head>
+    <body >
+        <div class="page">
+            <div class="page__header">                
+                <svg class="page__icon">
+                    <use xlink:href="../assets/images/sprite.svg#logo"></use>
+                </svg>
+            </div>
+            <div class="page__main">
+                <div class="menu">
+                    <div class="burger">
+                        <svg id="burger-menu-open" class="burger__menu-open">
+                            <use xlink:href="../assets/images/sprite.svg#burger"></use>
+                        </svg>
+                            
+                        <div id="burger-menu" class="burger__menu">
+                            <svg id="burger-menu-close" class="burger__menu-close">
+                                <use xlink:href="../assets/images/sprite.svg#close-menu"></use>
+                            </svg>
+                            <div class="burger__container">
+                                <div class="burger__container-title">Components</div>
+                                <a href="./modal.html">Modal</a>
+                                <a href="./tooltip.html">Tooltip</a>
+                                <a href="./avatar.html">Avatar</a>
+                                <a href="./calendar.html">Calendar</a>
+                                <a href="./histogram.html">Histogram</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=component>
+                    <h1 class="component__title">Calendar</h1>
+                    <div class="calendar">
+                        <div class="calendar__title">Июль 2021</div>
+                        <div class="calendar__wrapper">
+                            <div class="calendar__inner">
+                                <span class="calendar__item calendar__item-day">Пн</span>
+                                <span class="calendar__item calendar__item-day">Вт</span>
+                                <span class="calendar__item calendar__item-day">Ср</span>
+                                <span class="calendar__item calendar__item-day">Чт</span>
+                                <span class="calendar__item calendar__item-day">Пт</span>
+                                <span class="calendar__item calendar__item-day">Сб</span>
+                                <span class="calendar__item calendar__item-day">Вс</span>
+                                <span class="calendar__item"></span>
+                                <span class="calendar__item"></span>
+                                <span class="calendar__item"></span>
+                                <span class="calendar__item">1</span>
+                                <span class="calendar__item">2</span>
+                                <span class="calendar__item">3</span>
+                                <span class="calendar__item">4</span>
+                                <span class="calendar__item">5</span>
+                                <span class="calendar__item">6</span>
+                                <span class="calendar__item">7</span>
+                                <span class="calendar__item">8</span>
+                                <span class="calendar__item">9</span>
+                                <span class="calendar__item">10</span>
+                                <span class="calendar__item">11</span>
+                                <span class="calendar__item">12</span>
+                                <span class="calendar__item">13</span>
+                                <span class="calendar__item">14</span>
+                                <span class="calendar__item">15</span>
+                                <span class="calendar__item">16</span>
+                                <span class="calendar__item">17</span>
+                                <span class="calendar__item">18</span>
+                                <span class="calendar__item">19</span>
+                                <span class="calendar__item calendar__item-active">20</span>
+                                <span class="calendar__item calendar__item-between-active">22</span>
+                                <span class="calendar__item calendar__item-between-active">23</span>
+                                <span class="calendar__item calendar__item-between-active">24</span>
+                                <span class="calendar__item calendar__item-between-active">25</span>
+                                <span class="calendar__item calendar__item-active">26</span>
+                                <span class="calendar__item">27</span>
+                                <span class="calendar__item">28</span>
+                                <span class="calendar__item">29</span>
+                                <span class="calendar__item">30</span>
+                                <span class="calendar__item">31</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+ 
+            <div class="page__footer">Reusable component library</div>
+        </div>
+        <script defer src="./burger-menu.js"></script>
+    </body>
+</html>

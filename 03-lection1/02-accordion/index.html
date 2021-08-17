@@ -7,23 +7,30 @@
         <link rel="stylesheet" href="./accordion.css">
     </head>
     <body>
-        <details class="accordion__item"  open>
-            <summary class=accordion>
-                Accordion item 1
-            </summary>
-            <p>
-                1. Обратите внимание, что `summary` по-умолчанию имеет `display: inline`. Поменяйте, если это необходимо.
-
-                2. За стрелочку в `summary` отвечает псевдоэлемент `::-webkit-details-marker`. Так как пока что не изучали, как прибивать элементы к краям контейнера, то скрываем нативную так, а свою сделаем позже:
-            </p>
-        </details>
-        <details class="accordion__item">
-            <summary class=accordion>
-                Accordion item 2
-            </summary>
-            <p>
-                В директории компонента лежат стили, картинки, которые использует только он, возможно, что-то еще, специфичное именно для него.
-            </p>
-        </details>
+        <div class="accordion">
+            <details class="accordion__item"  open>
+                <summary class="accordion__summary">
+                    Accordion item 1
+                    <svg class="accordion__icon" >
+                        <use xlink:href="../../assets/images/sprite.svg#acordion__"></use>
+                    </svg>
+                </summary>
+                
+                <p>
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                </p>
+            </details>
+            <details class="accordion__item">
+                <summary class="accordion__summary">
+                    Accordion item 2
+                    <svg class="accordion__icon" >
+                        <use xlink:href="../../assets/images/sprite.svg#acordion__"></use>
+                    </svg>
+                </summary>
+                <p>
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                </p>
+            </details>
+        </div>
     </body>
 </html>

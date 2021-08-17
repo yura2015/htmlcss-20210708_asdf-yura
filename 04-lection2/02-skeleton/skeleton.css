@@ -5,6 +5,8 @@
     margin:0px;
     border: 1px solid var(--grey-3);
     border-radius: 8px;
+    width: 100%;
+    overflow: hidden;
 }
 .skeleton__column {
     display: flex; 
@@ -31,26 +33,52 @@
     height:20px;
     margin:5px;
     background: linear-gradient(to right, var(--grey-2) 0%, var(--grey-5) 33.33%, var(--grey-6)52.08%, var(--grey-7) 73.96%, var(--grey-2) 100% );
+    background-size: 200%;
+    animation-name: go;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
 }
+
 .skeleton__rectangle-mid {
     flex: 0 1 20px;
     max-width:calc(100% * 0.5);
     height:20px;
     margin:5px;
     background: linear-gradient(to right, var(--grey-2) 0%, var(--grey-5) 33.33%, var(--grey-6)52.08%, var(--grey-7) 73.96%, var(--grey-2) 100% );
+    background-size: 200%;
+    animation-name: go;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
 }
 .skeleton__rectangle-big {
     flex: 0 1 20px;
     max-width: 100%;
     margin:5px;
     background: linear-gradient(to right, var(--grey-2) 0%, var(--grey-5) 33.33%, var(--grey-6)52.08%, var(--grey-7) 73.96%, var(--grey-2) 100% );
+    background-size: 200%;
+    animation-name: go;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
 }
 .skeleton__circle {
     flex: 0 0 auto;
     flex-basis: 64px;
     height: 64px;
     border-radius: 32px;
-    background: var(--grey-2);
+    background: linear-gradient(to right, var(--grey-2) 0%, var(--grey-5) 33.33%, var(--grey-6)52.08%, var(--grey-7) 73.96%, var(--grey-2) 100% );
     margin:5px;
+    background-size: 200%;
+    animation-name: go;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes go {
+      0%{
+        background-position:100%;
+      }
+      100% {
+        background-position: -100%;
+      }
   }
   

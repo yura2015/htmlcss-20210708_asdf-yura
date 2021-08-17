@@ -14,6 +14,7 @@
     --grey-5: #E2E6E8;
     --grey-6: #F3F5F5;
     --grey-7: #E3E7EA;
+    --grey-bg: #E5E5E5;
 
     --error: var(--red);
     --success: var(--blue);
@@ -25,6 +26,8 @@
     --calendar-active:#A0B1F5;
     --calendar: #334D6E;
     --modal:#C4C4C4;
+    --active-text-color: var(--black);
+    
 }
 
 * {
@@ -43,3 +46,4 @@
     --value-9:25;
     --value-10:60;
     }
+

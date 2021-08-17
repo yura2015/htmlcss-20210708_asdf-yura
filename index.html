@@ -8,7 +8,24 @@
         <link rel="stylesheet" href="./components/footer/footer.css">
         <link rel="stylesheet" href="./components/card/card.css">
         <link rel="stylesheet" href="./components/preview/preview.css">
+        <link rel="stylesheet" href="./components/tabs/tabs.css">
         <link rel="stylesheet" href="./04-lection2/01-histogram/histogram.css">
+
+        <link rel="stylesheet" href="./05-lection3/01-tooltip/tooltip.css">
+        <link rel="stylesheet" href="./05-lection3/02-modal/modal.css">
+        <link rel="stylesheet" href="./03-lection1/01-button/button.css">
+        <link rel="stylesheet" href="./05-lection3/03-calendar/calendar.css">
+
+        <link rel="stylesheet" href="./07-lection5/01-checkbox/checkbox.css">
+        <link rel="stylesheet" href="./07-lection5/02-radio/radio.css">
+        <link rel="stylesheet" href="./07-lection5/03-toggler/toggler.css">
+        <link rel="stylesheet" href="./07-lection5/04-input/input.css">
+        <link rel="stylesheet" href="./07-lection5/03-toggler/index.css">
+        <link rel="stylesheet" href="./03-lection1/01-button/button.css">
+        <link rel="stylesheet" href="./06-lection4/01-avatar/avatar.css">
+
+        <link rel="stylesheet" href="./04-lection2/02-skeleton/skeleton.css">
+        <link rel="stylesheet" href="./03-lection1/02-accordion/accordion.css">
         <style>
             html,body {
                 height: 100%;
@@ -29,59 +46,711 @@
     </head>
     <body class="page">
         <header class="header">
+            <svg class="header__logo-icon">
+                <use xlink:href="./assets/images/sprite.svg#logo"></use>
+            </svg>
             <div class="page__box">
                 <h1 class="header__title">Reusable component library</h1>
             </div>
         </header>
         <main class="main">
-            <div class="page__box preview">
-                <div class="card">
-                    <div class="card__title">Tooltip</div>
-                </div>
-                <div class="card">
-                    <div class="card__title">Custom form elements</div>
-                </div>
-                <div class="card">
-                    <div class="card__title">Calendar</div>
-                </div>
-                <div class="card">
-                    <div class="card__title">Modal dialog</div>
-                </div>
-                <div class="card">
-                    <div class="preview-element">
-                        
+            
+                <div class="tabs">
+                    <input checked id="tab1" type="radio" name="tabs" />
+                    <input id="tab2" type="radio" name="tabs" />
+                    <input id="tab3" type="radio" name="tabs" />
+                    <input id="tab4" type="radio" name="tabs" />
+                    <nav class="tabs__nav">
+                      
+                        <ul class="tabs__menu">
+                          <li>
+                            <label class="label" for="tab1">All components</label>
+                          </li>
+                          <li>
+                            <label class="label" for="tab2">Atoms</label>
+                          </li>
+                          <li>
+                            <label class="label" for="tab3">Molecules</label>
+                          </li>
+                          <li>
+                            <label class="label" for="tab4">Organisms</label>
+                          </li>
+                        </ul>
+                     
+                    </nav>
+                    <div class="tabs__divider"></div>
+                    <section>
+                        <div class="tabs__tab-content -bg-grey tabs__tab-content-1">
+                            <div class="page__box preview">
 
-                        <div class="histogram">
-                            <div class="histogram__header">
-                                <div>Total orders</div>
-                                <div class="histogram__header-view">View all</div>
-                            </div>
-                            <div class="histogram__header">
-                                <div class="histogram__header-num">50254</div>
-                            </div>
-                            <div class="histogram__columns ten">
-                                <div class="histogram__column" style="height:calc(var(--value-1) * 1px);"></div>
-                                <div class="histogram__column" style="height:calc(var(--value-2) * 1px);"></div>
-                                <div class="histogram__column" style="height:calc(var(--value-3) * 1px);"></div>
-                                <div class="histogram__column" style="height:calc(var(--value-4) * 1px);"></div>
-                                <div class="histogram__column" style="height:calc(var(--value-5) * 1px);"></div>
-                                <div class="histogram__column" style="height:calc(var(--value-6) * 1px);"></div>
-                                <div class="histogram__column" style="height:calc(var(--value-7) * 1px);"></div>
-                                <div class="histogram__column" style="height:calc(var(--value-8) * 1px);"></div>
-                                <div class="histogram__column" style="height:calc(var(--value-9) * 1px);"></div>
-                                <div class="histogram__column" style="height:calc(var(--value-10) * 1px);"></div>
-                            </div>
-                        </div>
-                        <div class="card__title">Histogram</div>
-                    </div>
+                                <div class="card">
+                                    <div class="card__body">
+                                        <div class="tooltip">
+                
+                                            <div class="tooltip__trigger">
+                                                <svg class="tooltip__icon">
+                                                    <use xlink:href="./assets/images/sprite.svg#qwestion"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="tooltip__help">Helper Text</div>
+                                        
+                                        </div>
+                                       
+                                    </div>
+                                    <div class="card__title">Tooltip</div>
+                                </div>
+                
+                                <div class="card">
+                                    <div class="card__body">
+                                        <div style="margin:auto auto">
+                                            <button id="modal-open" class="button button_primary" >Open modal</button>
+                                        </div>
+                                        <div id="modal" class="modal">
+                                            <div class="modal__main">
+                                                <space class="modal__close" id="modal-close">x</space>
+                                                <div class="modal__title">Modal title</div>
+                                                <div class="modal__prompt">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. 
+                                                            Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+                                                            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="card__title">Modal dialog</div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card__body">
+                                        <div class="histogram">
+                                            <div class="histogram__header">
+                                                <div>Total orders</div>
+                                                <div class="histogram__header-view">View all</div>
+                                            </div>
+                                            <div class="histogram__header">
+                                                <div class="histogram__header-num">50254</div>
+                                            </div>
+                                            <div class="histogram__columns ten">
+                                                <div class="histogram__column" style="height:calc(var(--value-1) * 1px);"></div>
+                                                <div class="histogram__column" style="height:calc(var(--value-2) * 1px);"></div>
+                                                <div class="histogram__column" style="height:calc(var(--value-3) * 1px);"></div>
+                                                <div class="histogram__column" style="height:calc(var(--value-4) * 1px);"></div>
+                                                <div class="histogram__column" style="height:calc(var(--value-5) * 1px);"></div>
+                                                <div class="histogram__column" style="height:calc(var(--value-6) * 1px);"></div>
+                                                <div class="histogram__column" style="height:calc(var(--value-7) * 1px);"></div>
+                                                <div class="histogram__column" style="height:calc(var(--value-8) * 1px);"></div>
+                                                <div class="histogram__column" style="height:calc(var(--value-9) * 1px);"></div>
+                                                <div class="histogram__column" style="height:calc(var(--value-10) * 1px);"></div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="card__title">Histogram</div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card__body">
+                                        <div class="avatar">
+                                            <img src="./assets/images/avatar.png">
+                                        </div>
+
+                                    </div>
+                                    <div class="card__title">Avatar</div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card__body">
+                                        <form class="form">
+                                            <fieldset class="form__fieldset">
+                                                <legend class="form__legend">checkbox</legend>
+                                                <label class='checkbox'>
+                                                    <input type="checkbox" class="checkbox__input" >
+                                                    <div class="checkbox__state" >
+                                                        <div class="checkbox__control" >
+                                                            <svg class="checkbox__icon" width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.5 7.5L5 11L13 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </div>
+                                                        <p class="checkbox__legend">Default</p>
+                                    
+                                                    </div>
+                                                </label>
+                                    
+                                                <label class='checkbox'>
+                                                    <input type="checkbox" class="checkbox__input" checked >
+                                                    <div class="checkbox__state" >
+                                                        <div class="checkbox__control" >
+                                                            <svg class="checkbox__icon" width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.5 7.5L5 11L13 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </div>
+                                                        <p class="checkbox__legend">Checked</p>
+                                    
+                                                    </div>
+                                                </label>
+                                                
+                                                <label class='checkbox'>
+                                                    <input type="checkbox" class="checkbox__input" disabled >
+                                                    <div class="checkbox__state" >
+                                                        <div class="checkbox__control" >
+                                                            <svg class="checkbox__icon" width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.5 7.5L5 11L13 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </div>
+                                                        <p class="checkbox__legend">Disabled</p>
+                                    
+                                                    </div>
+                                                </label>
+                                            </fieldset>
+                                        </form>
+                                        
+                                    </div>
+                                    <div class="card__title">Custom form elements</div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card__body">
+                                        <div class="calendar">
+                                            <div class="calendar__title">Июль 2021</div>
+                                            <div class="calendar__wrapper">
+                                                <div class="calendar__inner">
+                                                    <span class="calendar__item calendar__item-day">Пн</span>
+                                                    <span class="calendar__item calendar__item-day">Вт</span>
+                                                    <span class="calendar__item calendar__item-day">Ср</span>
+                                                    <span class="calendar__item calendar__item-day">Чт</span>
+                                                    <span class="calendar__item calendar__item-day">Пт</span>
+                                                    <span class="calendar__item calendar__item-day">Сб</span>
+                                                    <span class="calendar__item calendar__item-day">Вс</span>
+                                                    <span class="calendar__item"></span>
+                                                    <span class="calendar__item"></span>
+                                                    <span class="calendar__item"></span>
+                                                    <span class="calendar__item">1</span>
+                                                    <span class="calendar__item">2</span>
+                                                    <span class="calendar__item">3</span>
+                                                    <span class="calendar__item">4</span>
+                                                    <span class="calendar__item">5</span>
+                                                    <span class="calendar__item">6</span>
+                                                    <span class="calendar__item">7</span>
+                                                    <span class="calendar__item">8</span>
+                                                    <span class="calendar__item">9</span>
+                                                    <span class="calendar__item">10</span>
+                                                    <span class="calendar__item">11</span>
+                                                    <span class="calendar__item">12</span>
+                                                    <span class="calendar__item">13</span>
+                                                    <span class="calendar__item">14</span>
+                                                    <span class="calendar__item">15</span>
+                                                    <span class="calendar__item">16</span>
+                                                    <span class="calendar__item">17</span>
+                                                    <span class="calendar__item">18</span>
+                                                    <span class="calendar__item">19</span>
+                                                    <span class="calendar__item calendar__item-active">20</span>
+                                                    <span class="calendar__item calendar__item-between-active">22</span>
+                                                    <span class="calendar__item calendar__item-between-active">23</span>
+                                                    <span class="calendar__item calendar__item-between-active">24</span>
+                                                    <span class="calendar__item calendar__item-between-active">25</span>
+                                                    <span class="calendar__item calendar__item-active">26</span>
+                                                    <span class="calendar__item">27</span>
+                                                    <span class="calendar__item">28</span>
+                                                    <span class="calendar__item">29</span>
+                                                    <span class="calendar__item">30</span>
+                                                    <span class="calendar__item">31</span>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="card__title">Calendar</div>
+                                </div>
+
+                            </div> <!-- page__box preview  -->
+                        </div> <!-- tabs__tab-content-1  -->
+                    </section>
+
+        <!--      TAB - SELECT 2         -->
+                    <section>
+                        <div class="tabs__tab-content -bg-grey tabs__tab-content-2">
+                            <div class="page__box preview">
+
+                                <div class="card">
+                                    <div class="card__body">
+                                        <div class="tooltip">
+                
+                                            <div class="tooltip__trigger">
+                                                <svg class="tooltip__icon">
+                                                    <use xlink:href="./assets/images/sprite.svg#qwestion"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="tooltip__help">Helper Text</div>
+                                        
+                                        </div>
+                                       
+                                    </div>
+                                    <div class="card__title">Tooltip</div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card__body">
+                                        <div class="avatar">
+                                            <img src="./assets/images/avatar.png">
+                                        </div>
+
+                                    </div>
+                                    <div class="card__title">Avatar</div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card__body">
+                                        <div>
+                                            <button class="button button_primary" >Primary</button>
+                                            <button class="button button_primary" disabled >Primary disable</button>
+                                        </div>
+                                        <div>
+                                            <button class="button button_secondary">Secondary</button>
+                                            <button class="button button_secondary" disabled >Secondary disable</button>
+                                        </div>
+                                        <div>
+                                            <button class="button button_alternate">Alternate</button>
+                                            <button class="button button_alternate" disabled >Alternate disable</button>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="card__title">Buttons</div>
+                                </div>
+
+
+                                <div class="card">
+                                    <div class="card__body">
+                                        <form class="form">
+                                            <fieldset class="form__fieldset">
+                                                <legend class="form__legend">checkbox</legend>
+                                                <label class='checkbox'>
+                                                    <input type="checkbox" class="checkbox__input" >
+                                                    <div class="checkbox__state" >
+                                                        <div class="checkbox__control" >
+                                                            <svg class="checkbox__icon" width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.5 7.5L5 11L13 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </div>
+                                                        <p class="checkbox__legend">Default</p>
+                                    
+                                                    </div>
+                                                </label>
+                                    
+                                                <label class='checkbox'>
+                                                    <input type="checkbox" class="checkbox__input" checked >
+                                                    <div class="checkbox__state" >
+                                                        <div class="checkbox__control" >
+                                                            <svg class="checkbox__icon" width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.5 7.5L5 11L13 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </div>
+                                                        <p class="checkbox__legend">Checked</p>
+                                    
+                                                    </div>
+                                                </label>
+                                                
+                                                <label class='checkbox'>
+                                                    <input type="checkbox" class="checkbox__input" disabled >
+                                                    <div class="checkbox__state" >
+                                                        <div class="checkbox__control" >
+                                                            <svg class="checkbox__icon" width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.5 7.5L5 11L13 2" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </div>
+                                                        <p class="checkbox__legend">Disabled</p>
+                                    
+                                                    </div>
+                                                </label>
+                                            </fieldset>
+                                        </form>
+                                        
+                                    </div>
+                                    <div class="card__title">Custom form elements</div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card__body">
+                                        <form class="form">
+                                            <fieldset class="form__fieldset">
+                                                <legend class="form__legend">toggler</legend>
+                                                <label class="toggler form__control">
+                                                    <input type="checkbox" class="toggler__input" name="toggler" value="1">
+                                                    <div class="toggler__state">
+                                                        <div class="toggler__control">
+                                                            <div class="toggler__round"></div>
+                                                        </div>
+                                                        <p class="toggler__legend">Off</p>
+                                                    </div>
+                                                </label>
+                                                <label class="toggler form__control">
+                                                    <input type="checkbox" class="toggler__input" name="toggler" value="2" checked>
+                                                    <div class="toggler__state">
+                                                        <div class="toggler__control">
+                                                            <div class="toggler__round"></div>
+                                                        </div>
+                                                        <p class="toggler__legend">On</p>
+                                                    </div>
+                                                </label>
+                                                <label class="toggler form__control">
+                                                    <input type="checkbox" class="toggler__input" name="toggler" value="3" disabled>
+                                                    <div class="toggler__state">
+                                                        <div class="toggler__control">
+                                                            <div class="toggler__round"></div>
+                                                        </div>
+                                                        <p class="toggler__legend">Disabled</p>
+                                                    </div>
+                                                </label>
+                                                <label class="toggler form__control">
+                                                    <input type="checkbox" class="toggler__input" name="toggler2" value="4" disabled checked>
+                                                    <div class="toggler__state">
+                                                        <div class="toggler__control">
+                                                            <div class="toggler__round"></div>
+                                                        </div>
+                                                        <p class="toggler__legend">On disabled</p>
+                                                    </div>
+                                                </label>
+                                            </fieldset>
+                                        </form>
+                                        
+                                    </div>
+                                    <div class="card__title">Custom form elements</div>
+                                </div>
+
+                            </div> <!-- page__box preview  -->
+                        </div> <!-- tabs__tab-content-2  -->
+                    </section>
                     
+        <!--      TAB - SELECT 3      -->
+                    <section>   
+                        <div class="tabs__tab-content -bg-grey tabs__tab-content-3">
+                            <div class="page__box preview">
 
-                </div>
-                <div class="card">
-                    <div class="card__title">Avatar</div>
-                </div>
-            </div>
+
+                                <div class="card">
+                                    <div class="card__body">
+                                        <form class="form">
+                                            <fieldset class="form__fieldset">
+                                                <legend class="form__legend">radio button</legend>
+                                                <label class='radio'>
+                                                    <input type="radio" class="radio__input" name="radio-name">
+                                                    <div class="radio__state" >
+                                                        <div class="radio__control" >
+                                                            <svg class="radio__icon-on" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <rect width="18" height="18" rx="9" fill="#4263EB"/>
+                                                            </svg>
+                                                        </div>
+                                                        <p class="radio__legend">Default</p>
+                                    
+                                                    </div>
+                                                </label>
+                                    
+                                                <label class='radio'>
+                                                    <input type="radio" class="radio__input" checked name="radio-name">
+                                                    <div class="radio__state" >
+                                                        <div class="radio__control" >
+                                                            <svg class="radio__icon-on" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <rect width="18" height="18" rx="9" fill="#4263EB"/>
+                                                            </svg>
+                                                        </div>
+                                                        <p class="radio__legend">Selected</p>
+                                    
+                                                    </div>
+                                                </label>
+                                                
+                                                <label class='radio'>
+                                                    <input type="checkbox" class="radio__input" disabled name="radio-name" >
+                                                    <div class="radio__state" >
+                                                        <div class="radio__control" >
+                                                            <svg class="radio__icon-on" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <rect width="18" height="18" rx="9" fill="#4263EB"/>
+                                                            </svg>
+                                                        </div>
+                                                        <p class="radio__legend">Disabled</p>
+                                                    </div>
+                                                </label>
+                                            </fieldset>
+                                        </form>
+                                        
+                                    </div>
+                                    <div class="card__title">Custom form elements</div>
+                                </div>
+                
+                                <div class="card">
+                                    <div class="card__body">
+                                        <div class="calendar">
+                                            <div class="calendar__title">Июль 2021</div>
+                                            <div class="calendar__wrapper">
+                                                <div class="calendar__inner">
+                                                    <span class="calendar__item calendar__item-day">Пн</span>
+                                                    <span class="calendar__item calendar__item-day">Вт</span>
+                                                    <span class="calendar__item calendar__item-day">Ср</span>
+                                                    <span class="calendar__item calendar__item-day">Чт</span>
+                                                    <span class="calendar__item calendar__item-day">Пт</span>
+                                                    <span class="calendar__item calendar__item-day">Сб</span>
+                                                    <span class="calendar__item calendar__item-day">Вс</span>
+                                                    <span class="calendar__item"></span>
+                                                    <span class="calendar__item"></span>
+                                                    <span class="calendar__item"></span>
+                                                    <span class="calendar__item">1</span>
+                                                    <span class="calendar__item">2</span>
+                                                    <span class="calendar__item">3</span>
+                                                    <span class="calendar__item">4</span>
+                                                    <span class="calendar__item">5</span>
+                                                    <span class="calendar__item">6</span>
+                                                    <span class="calendar__item">7</span>
+                                                    <span class="calendar__item">8</span>
+                                                    <span class="calendar__item">9</span>
+                                                    <span class="calendar__item">10</span>
+                                                    <span class="calendar__item">11</span>
+                                                    <span class="calendar__item">12</span>
+                                                    <span class="calendar__item">13</span>
+                                                    <span class="calendar__item">14</span>
+                                                    <span class="calendar__item">15</span>
+                                                    <span class="calendar__item">16</span>
+                                                    <span class="calendar__item">17</span>
+                                                    <span class="calendar__item">18</span>
+                                                    <span class="calendar__item">19</span>
+                                                    <span class="calendar__item calendar__item-active">20</span>
+                                                    <span class="calendar__item calendar__item-between-active">22</span>
+                                                    <span class="calendar__item calendar__item-between-active">23</span>
+                                                    <span class="calendar__item calendar__item-between-active">24</span>
+                                                    <span class="calendar__item calendar__item-between-active">25</span>
+                                                    <span class="calendar__item calendar__item-active">26</span>
+                                                    <span class="calendar__item">27</span>
+                                                    <span class="calendar__item">28</span>
+                                                    <span class="calendar__item">29</span>
+                                                    <span class="calendar__item">30</span>
+                                                    <span class="calendar__item">31</span>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="card__title">Calendar</div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card__body">
+                                        <div class="skeleton">
+                                            <div class="skeleton__column">
+                                                <div  class="skeleton__row">
+                                                    <div class="skeleton__circle"></div>
+                                                    <div class="skeleton__column">
+                                                        <div class="skeleton__rectangle-min"></div>
+                                                        <div class="skeleton__rectangle-mid"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="skeleton__rectangle-big"></div>
+                                                <div class="skeleton__rectangle-big"></div>
+                                            
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card__title">Skeleton</div>
+                                </div>
+                        
+                
+                                <div class="card">
+                                    <div class="card__body">
+                                        <form class="form">
+                                            <fieldset class="form__fieldset">
+                                                <legend class="form__legend">input text</legend>
+                                                <label class='input'>
+                                                    <p class="input__legend">Label</p>
+                                                    <div class="input__state" >
+                                                        <input type="text" class="input__control"  placeholder="Placeholder">
+                                                        <svg class="input__icon-success" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18457 2.99721 7.13633 4.39828 5.49707C5.79935 3.85782 7.69279 2.71538 9.79619 2.24015C11.8996 1.76491 14.1003 1.98234 16.07 2.86" stroke="#374FC7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M22 4L12 14.01L9 11.01" stroke="#374FC7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <svg class="input__icon-invalid" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M10.29 3.86001L1.82 18C1.64537 18.3024 1.55296 18.6453 1.55199 18.9945C1.55101 19.3437 1.64149 19.6871 1.81442 19.9905C1.98736 20.2939 2.23672 20.5468 2.53771 20.7239C2.83869 20.901 3.1808 20.9962 3.53 21H20.47C20.8192 20.9962 21.1613 20.901 21.4623 20.7239C21.7633 20.5468 22.0126 20.2939 22.1856 19.9905C22.3585 19.6871 22.449 19.3437 22.448 18.9945C22.447 18.6453 22.3546 18.3024 22.18 18L13.71 3.86001C13.5317 3.56611 13.2807 3.32313 12.9812 3.15449C12.6817 2.98585 12.3437 2.89726 12 2.89726C11.6563 2.89726 11.3183 2.98585 11.0188 3.15449C10.7193 3.32313 10.4683 3.56611 10.29 3.86001V3.86001Z" stroke="#F03D3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M12 9V13" stroke="#F03D3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M12 16V16.5" stroke="#F03D3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        
+                                                    </div>
+                                    
+                                                </label>
+                                    
+                                                <label class='input'>
+                                                    <p class="input__legend">Focus</p>
+                                                    <div class="input__state" >
+                                                        <input type="text" class="input__control"  placeholder="Focus">
+                                                        <svg class="input__icon-success" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18457 2.99721 7.13633 4.39828 5.49707C5.79935 3.85782 7.69279 2.71538 9.79619 2.24015C11.8996 1.76491 14.1003 1.98234 16.07 2.86" stroke="#374FC7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M22 4L12 14.01L9 11.01" stroke="#374FC7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <svg class="input__icon-invalid" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M10.29 3.86001L1.82 18C1.64537 18.3024 1.55296 18.6453 1.55199 18.9945C1.55101 19.3437 1.64149 19.6871 1.81442 19.9905C1.98736 20.2939 2.23672 20.5468 2.53771 20.7239C2.83869 20.901 3.1808 20.9962 3.53 21H20.47C20.8192 20.9962 21.1613 20.901 21.4623 20.7239C21.7633 20.5468 22.0126 20.2939 22.1856 19.9905C22.3585 19.6871 22.449 19.3437 22.448 18.9945C22.447 18.6453 22.3546 18.3024 22.18 18L13.71 3.86001C13.5317 3.56611 13.2807 3.32313 12.9812 3.15449C12.6817 2.98585 12.3437 2.89726 12 2.89726C11.6563 2.89726 11.3183 2.98585 11.0188 3.15449C10.7193 3.32313 10.4683 3.56611 10.29 3.86001V3.86001Z" stroke="#F03D3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M12 9V13" stroke="#F03D3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M12 16V16.5" stroke="#F03D3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                    </div>
+                                                </label>
+                                    
+                                                <label class='input'>
+                                                    <p class="input__legend">Success</p>
+                                                    <div class="input__state" >
+                                                        
+                                                        <input type="text" class="input__control input__control-success"  placeholder="Success">
+                                                            <svg class="input__icon-success" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18457 2.99721 7.13633 4.39828 5.49707C5.79935 3.85782 7.69279 2.71538 9.79619 2.24015C11.8996 1.76491 14.1003 1.98234 16.07 2.86" stroke="#374FC7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M22 4L12 14.01L9 11.01" stroke="#374FC7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                            <svg class="input__icon-invalid" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M10.29 3.86001L1.82 18C1.64537 18.3024 1.55296 18.6453 1.55199 18.9945C1.55101 19.3437 1.64149 19.6871 1.81442 19.9905C1.98736 20.2939 2.23672 20.5468 2.53771 20.7239C2.83869 20.901 3.1808 20.9962 3.53 21H20.47C20.8192 20.9962 21.1613 20.901 21.4623 20.7239C21.7633 20.5468 22.0126 20.2939 22.1856 19.9905C22.3585 19.6871 22.449 19.3437 22.448 18.9945C22.447 18.6453 22.3546 18.3024 22.18 18L13.71 3.86001C13.5317 3.56611 13.2807 3.32313 12.9812 3.15449C12.6817 2.98585 12.3437 2.89726 12 2.89726C11.6563 2.89726 11.3183 2.98585 11.0188 3.15449C10.7193 3.32313 10.4683 3.56611 10.29 3.86001V3.86001Z" stroke="#F03D3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M12 9V13" stroke="#F03D3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                <path d="M12 16V16.5" stroke="#F03D3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            </svg>
+                                                        </input>
+                                                    </div>
+                                    
+                                                </label>
+                                    
+                                                <label class='input'>
+                                                    <p class="input__legend">Error</p>
+                                                    <div class="input__state" >
+                                                        
+                                                        <input type="text" class="input__control input__control-invalid"  placeholder="Error">
+                                                        <svg class="input__icon-success" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.709 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18457 2.99721 7.13633 4.39828 5.49707C5.79935 3.85782 7.69279 2.71538 9.79619 2.24015C11.8996 1.76491 14.1003 1.98234 16.07 2.86" stroke="#374FC7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M22 4L12 14.01L9 11.01" stroke="#374FC7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                        <svg class="input__icon-invalid" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M10.29 3.86001L1.82 18C1.64537 18.3024 1.55296 18.6453 1.55199 18.9945C1.55101 19.3437 1.64149 19.6871 1.81442 19.9905C1.98736 20.2939 2.23672 20.5468 2.53771 20.7239C2.83869 20.901 3.1808 20.9962 3.53 21H20.47C20.8192 20.9962 21.1613 20.901 21.4623 20.7239C21.7633 20.5468 22.0126 20.2939 22.1856 19.9905C22.3585 19.6871 22.449 19.3437 22.448 18.9945C22.447 18.6453 22.3546 18.3024 22.18 18L13.71 3.86001C13.5317 3.56611 13.2807 3.32313 12.9812 3.15449C12.6817 2.98585 12.3437 2.89726 12 2.89726C11.6563 2.89726 11.3183 2.98585 11.0188 3.15449C10.7193 3.32313 10.4683 3.56611 10.29 3.86001V3.86001Z" stroke="#F03D3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M12 9V13" stroke="#F03D3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                            <path d="M12 16V16.5" stroke="#F03D3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                        </svg>
+                                                    </input>
+                                                    </div>
+                                                </label>
+                                            </fieldset>
+                                        </form>
+                                        
+                                    </div>
+                                    <div class="card__title">Custom form elements</div>
+                                </div>
+                                
+                            </div> <!-- page__box preview  -->
+                        </div> <!-- tabs__tab-content-3  -->
+                    </section>  
+                    
+                    <section>
+        <!--      TAB - SELECT 4         -->                
+                        <div class="tabs__tab-content -bg-grey tabs__tab-content-4">
+                            <div class="page__box preview">
+    
+                                <div class="card">
+                                    <div class="card__body">
+                                        <div style="margin:auto auto">
+                                            <button id="modal-open" class="button button_primary" >Open modal</button>
+                                        </div>
+                                        <div id="modal" class="modal">
+                                            <div class="modal__main">
+                                                <space class="modal__close" id="modal-close">x</space>
+                                                <div class="modal__title">Modal title</div>
+                                                <div class="modal__prompt">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. 
+                                                            Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+                                                            Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="card__title">Modal dialog</div>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card__body">
+                                        <div class="histogram">
+                                            <div class="histogram__header">
+                                                <div>Total orders</div>
+                                                <div class="histogram__header-view">View all</div>
+                                            </div>
+                                            <div class="histogram__header">
+                                                <div class="histogram__header-num">50254</div>
+                                            </div>
+                                            <div class="histogram__columns ten">
+                                                <div class="histogram__column" style="height:calc(var(--value-1) * 1px);"></div>
+                                                <div class="histogram__column" style="height:calc(var(--value-2) * 1px);"></div>
+                                                <div class="histogram__column" style="height:calc(var(--value-3) * 1px);"></div>
+                                                <div class="histogram__column" style="height:calc(var(--value-4) * 1px);"></div>
+                                                <div class="histogram__column" style="height:calc(var(--value-5) * 1px);"></div>
+                                                <div class="histogram__column" style="height:calc(var(--value-6) * 1px);"></div>
+                                                <div class="histogram__column" style="height:calc(var(--value-7) * 1px);"></div>
+                                                <div class="histogram__column" style="height:calc(var(--value-8) * 1px);"></div>
+                                                <div class="histogram__column" style="height:calc(var(--value-9) * 1px);"></div>
+                                                <div class="histogram__column" style="height:calc(var(--value-10) * 1px);"></div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="card__title">Histogram</div>
+                                </div>
+
+                                
+                                
+
+                                <div class="card">
+                                    <div class="card__body">
+
+                                        <div class="accordion">
+                                            <details class="accordion__item"  open>
+                                                <summary class="accordion__summary">
+                                                    Accordion item 1
+                                                    <svg class="accordion__icon" >
+                                                        <use xlink:href="../../assets/images/sprite.svg#acordion__"></use>
+                                                    </svg>
+                                                </summary>
+                                                
+                                                <p>
+                                                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                                                </p>
+                                            </details>
+                                            <details class="accordion__item">
+                                                <summary class="accordion__summary">
+                                                    Accordion item 2
+                                                    <svg class="accordion__icon" >
+                                                        <use xlink:href="../../assets/images/sprite.svg#acordion__"></use>
+                                                    </svg>
+                                                </summary>
+                                                <p>
+                                                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                                                </p>
+                                            </details>
+                                            <details class="accordion__item">
+                                                <summary class="accordion__summary">
+                                                    Accordion item 3
+                                                    <svg class="accordion__icon" >
+                                                        <use xlink:href="../../assets/images/sprite.svg#acordion__"></use>
+                                                    </svg>
+                                                </summary>
+                                                <p>
+                                                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                                                </p>
+                                            </details>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="card__title">Accordion</div>
+                                </div>
+
+
+
+                            
+
+                               
+
+                            </div> <!-- page__box preview  -->
+                        </div> <!-- tabs__tab-content-4  -->
+
+                    </section>
+                </div> <!--  tabs -->
         </main>
+
         <footer class="footer">
             <div class="page__box"></div>
                 <h2 class="footer__title">About</h2>
@@ -91,4 +760,5 @@
         
         
     </body>
+    <script src="./05-lection3/02-modal/index.js"></script> 
 </html>

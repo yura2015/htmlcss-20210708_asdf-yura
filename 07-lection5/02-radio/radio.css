@@ -1,5 +1,6 @@
 .radio {
    display: block;
+   margin:20px;
 }
 
 .radio__input {

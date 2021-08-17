@@ -5,19 +5,19 @@
 }
 
 .tooltip__trigger {
-
+   
 }
 
 .tooltip__help {
-    background-color: var(--blue);
+    background-color:var(--primary);
     box-shadow: 0px 2px 4px rgba(33, 36 41, 0.05);
     border-radius: 10px;
     width: 129px;
     padding: 13px 21px;
     position:absolute;
-    left: 50%;
     bottom:100%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -5px);
+    left: 50%;
     font-family: Inter;
     font-style: normal;
     font-weight: 400;
@@ -26,6 +26,21 @@
     color: var(--grey-2);
     text-align: center;
     display: none;
+
+    /*
+    height: 45px;
+    border-radius: 10px;
+    background: var(--primary);
+    position: absolute;
+    bottom: 100%;
+    transform: translate(-50%, -10px);
+    left: 50%;
+    color: var(--white);
+    padding: 13px 21px;
+    opacity: 0;
+    transition: opacity 0.2s linear, transform 0.1s linear;
+    pointer-events: none;
+    */
 }
 .tooltip__help:before {
     content: "";
@@ -38,4 +53,10 @@
 }
 .tooltip__trigger:hover ~ .tooltip__help {
     display: block;
+}
+.tooltip__icon {
+    fill: none;
+    width: 24px;
+    height: 24px;
+    color: var(--primary);
 }

@@ -3,6 +3,7 @@
 .button
 {
     padding: 0;
+    margin:5px;
     box-sizing: border-box;
     box-shadow: none;
     outline: none;
