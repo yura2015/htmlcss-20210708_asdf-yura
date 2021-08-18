@@ -26,6 +26,7 @@
      border-radius: 4px;
      position: relative;
      cursor: pointer;
+    
  }
  .checkbox__input:checked ~ .checkbox__state .checkbox__control{
      background: var(--blue);
@@ -70,3 +71,19 @@
      color: var(--grey-4);
      margin-left: 12px;
  }
+
+ .checkbox .checkbox__input:checked ~ .checkbox__state .checkbox__control {
+    animation: pulse .5s;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 #bdc3c7; 
+    }
+    100% {
+        box-shadow: 0 0 0 1.5rem rgba(189, 195, 199, 0);
+    }
+}
+
+
+

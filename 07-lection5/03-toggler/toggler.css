@@ -80,3 +80,17 @@
 .toggler__input:disabled ~ .toggler__state .toggler__legend {
     color: #DDE2E5;
 }
+
+.toggler .toggler__input:checked ~ .toggler__state .toggler__control {
+    animation: pulse .5s;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 #bdc3c7; 
+    }
+    100% {
+        box-shadow: 0 0 0 1.5rem rgba(189, 195, 199, 0);
+    }
+}
+

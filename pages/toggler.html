@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="../assets/css/template.css">
         <link rel="stylesheet" href="../assets/css/burger.css">
 
-        <link rel="stylesheet" href="../05-lection3/03-calendar/calendar.css">
+        <link rel="stylesheet" href="../07-lection5/03-toggler/toggler.css">
         
         <style>
             html {
@@ -52,15 +52,53 @@
                                 <a href="./skeleton.html">Skeleton</a>
                                 <a href="./toggler.html">Toggler</a>
                                 <a href="./tooltip.html">Tooltip</a>
-                                
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class=component>
-                    <h1 class="component__title">Component</h1>
-                    
-                </div>
+                    <h1 class="component__title">Toggler</h1>
+                    <form class="form">
+                        <fieldset class="form__fieldset">
+                            <legend class="form__legend">toggler</legend>
+                            <label class="toggler form__control">
+                                <input type="checkbox" class="toggler__input" name="toggler" value="1">
+                                <div class="toggler__state">
+                                    <div class="toggler__control">
+                                        <div class="toggler__round"></div>
+                                    </div>
+                                    <p class="toggler__legend">Default</p>
+                                </div>
+                            </label>
+                            <label class="toggler form__control">
+                                <input type="checkbox" class="toggler__input" name="toggler" value="2" checked>
+                                <div class="toggler__state">
+                                    <div class="toggler__control">
+                                        <div class="toggler__round"></div>
+                                    </div>
+                                    <p class="toggler__legend">Checked</p>
+                                </div>
+                            </label>
+                            <label class="toggler form__control">
+                                <input type="checkbox" class="toggler__input" name="toggler" value="3" disabled>
+                                <div class="toggler__state">
+                                    <div class="toggler__control">
+                                        <div class="toggler__round"></div>
+                                    </div>
+                                    <p class="toggler__legend">Disabled</p>
+                                </div>
+                            </label>
+                            <label class="toggler form__control">
+                                <input type="checkbox" class="toggler__input" name="toggler2" value="4" disabled checked>
+                                <div class="toggler__state">
+                                    <div class="toggler__control">
+                                        <div class="toggler__round"></div>
+                                    </div>
+                                    <p class="toggler__legend">Checked disabled</p>
+                                </div>
+                            </label>
+                        </fieldset>
+                    </form>
                 
             </div>
  
