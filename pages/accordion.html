@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="../assets/css/burger.css">
 
         <link rel="stylesheet" href="../03-lection1/02-accordion/accordion.css">
+        <link rel="stylesheet" href="../07-lection5/03-toggler/toggler.css">
+  
         
         <style>
             html {
@@ -21,36 +23,68 @@
     </head>
     <body >
         <div class="page">
-            <div class="page__header">                
-                <svg class="page__icon">
+            <div class="page__header">   
+                <svg id="burger-menu-open" class="page__icon-burger">
+                    <use xlink:href="../assets/images/sprite.svg#burger"></use>
+                </svg>             
+                <svg class="page__icon-logo">
                     <use xlink:href="../assets/images/sprite.svg#logo"></use>
                 </svg>
+                <div class="header__switch">
+                    <svg class="header__switch-icon">
+                        <use xlink:href="../assets/images/sprite.svg#sun"></use>
+                    </svg>
+                    <div class="header__toggler">
+                        <label class="toggler form__control">
+                            <input id="theme-changer" type="checkbox" class="toggler__input" name="toggler" value="1">
+                            <div class="toggler__state">
+                                <div class="toggler__control">
+                                    <div class="toggler__round"></div>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                    <svg class="header__switch-icon">
+                        <use xlink:href="../assets/images/sprite.svg#moon"></use>
+                    </svg>
+                </div>
+                
             </div>
             <div class="page__main">
                 <div class="menu">
                     <div class="burger">
-                        <svg id="burger-menu-open" class="burger__menu-open">
-                            <use xlink:href="../assets/images/sprite.svg#burger"></use>
-                        </svg>
-                            
                         <div id="burger-menu" class="burger__menu">
                             <svg id="burger-menu-close" class="burger__menu-close">
                                 <use xlink:href="../assets/images/sprite.svg#close-menu"></use>
                             </svg>
+                            <div class="burger__switch">
+                                <div class="burger__container-title">Dark mode</div> 
+                                <div class="burger__toggler">
+                                    <label class="toggler form__control">
+                                        <input id="theme-changer-main" type="checkbox" class="toggler__input" name="toggler" value="1">
+                                        <div class="toggler__state">
+                                            <div class="toggler__control">
+                                                <div class="toggler__round"></div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
                             <div class="burger__container">
+                                
                                 <div class="burger__container-title">Components</div>
-                                <a href="./accordion.html">Accordion</a>
-                                <a href="./avatar.html">Avatar</a>
-                                <a href="./button.html">Button</a>
-                                <a href="./calendar.html">Calendar</a>
-                                <a href="./checkbox.html">Checkbox</a>
-                                <a href="./histogram.html">Histogram</a>
-                                <a href="./input.html">Input</a>
-                                <a href="./modal.html">Modal</a>
-                                <a href="./radio.html">Radio</a>
-                                <a href="./skeleton.html">Skeleton</a>
-                                <a href="./toggler.html">Toggler</a>
-                                <a href="./tooltip.html">Tooltip</a>
+                                <a class="burger__container-href" href="./accordion.html">Accordion</a>
+                                <a class="burger__container-href" href="./avatar.html">Avatar </a>
+                                <a class="burger__container-href" href="./button.html">Button</a>
+                                <a class="burger__container-href" href="./calendar.html">Calendar</a>
+                                <a class="burger__container-href" href="./checkbox.html">Checkbox</a>
+                                <a class="burger__container-href" href="./histogram.html">Histogram</a>
+                                <a class="burger__container-href" href="./input.html">Input</a>
+                                <a class="burger__container-href" href="./modal.html">Modal</a>
+                                <a class="burger__container-href" href="./radio.html">Radio</a>
+                                <a class="burger__container-href" href="./skeleton.html">Skeleton</a>
+                                <a class="burger__container-href" href="./toggler.html">Toggler</a>
+                                <a class="burger__container-href" href="./tooltip.html">Tooltip</a>
                                 
                             </div>
                         </div>
@@ -63,7 +97,7 @@
                             <summary class="accordion__summary">
                                 Accordion item 1
                                 <svg class="accordion__icon" >
-                                    <use xlink:href="../../assets/images/sprite.svg#acordion__"></use>
+                                    <use xlink:href="../assets/images/sprite.svg#acordion__"></use>
                                 </svg>
                             </summary>
                             
@@ -75,7 +109,7 @@
                             <summary class="accordion__summary">
                                 Accordion item 2
                                 <svg class="accordion__icon" >
-                                    <use xlink:href="../../assets/images/sprite.svg#acordion__"></use>
+                                    <use xlink:href="../assets/images/sprite.svg#acordion__"></use>
                                 </svg>
                             </summary>
                             <p>
@@ -86,7 +120,7 @@
                             <summary class="accordion__summary">
                                 Accordion item 3
                                 <svg class="accordion__icon" >
-                                    <use xlink:href="../../assets/images/sprite.svg#acordion__"></use>
+                                    <use xlink:href="../assets/images/sprite.svg#acordion__"></use>
                                 </svg>
                             </summary>
                             <p>
@@ -101,5 +135,7 @@
             <div class="page__footer">Reusable component library</div>
         </div>
         <script defer src="./burger-menu.js"></script>
+        <script src="../10-lection8/01-theme-changer/theme-changer.js"></script>
+        <script src="../10-lection8/01-theme-changer/theme-changer-main.js"></script>
     </body>
 </html>

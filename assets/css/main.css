@@ -27,6 +27,8 @@
     --calendar: #334D6E;
     --modal:#C4C4C4;
     --active-text-color: var(--black);
+    --black-logo: #212429;
+    --modal-text: var(--grey-4);
     
 }
 
@@ -65,7 +67,10 @@ html[data-theme-dark] {
     --grey-bg: #444444;
 
     --active-text-color: var(--black);
+    --modal:#C4C4C4;
+    --modal-text:#ffffff; 
 }
 .main {
     display: block;
+    background-color: var(--grey-1);
 }

@@ -2,10 +2,14 @@
 .tooltip {
     display: block;
     position:relative;
+    height: 100px;
 }
 
 .tooltip__trigger {
-   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0px;
 }
 
 .tooltip__help {
@@ -27,20 +31,6 @@
     text-align: center;
     display: none;
 
-    /*
-    height: 45px;
-    border-radius: 10px;
-    background: var(--primary);
-    position: absolute;
-    bottom: 100%;
-    transform: translate(-50%, -10px);
-    left: 50%;
-    color: var(--white);
-    padding: 13px 21px;
-    opacity: 0;
-    transition: opacity 0.2s linear, transform 0.1s linear;
-    pointer-events: none;
-    */
 }
 .tooltip__help:before {
     content: "";
