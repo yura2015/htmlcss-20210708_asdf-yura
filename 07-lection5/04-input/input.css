@@ -6,8 +6,8 @@
 }
 
 .input__control {
-    width: 250px;
-    height: 36px;
+    width: 350px;
+    height: 56px;
     cursor: pointer;
     background: var(--white);
     border: 1px solid var(--grey-2);
@@ -79,7 +79,7 @@
     display: none;
     position: absolute;
     top: 50%;
-    right: 20px;
+    right: 12px;
     transform: translate(-50%, -50%);
 }
 
