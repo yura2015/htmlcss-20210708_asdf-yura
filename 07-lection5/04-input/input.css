@@ -8,6 +8,7 @@
 .input__control {
     width: 350px;
     height: 56px;
+    box-sizing: border-box;
     cursor: pointer;
     background: var(--white);
     border: 1px solid var(--grey-2);
