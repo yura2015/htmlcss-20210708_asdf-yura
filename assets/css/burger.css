@@ -14,9 +14,9 @@
     position:fixed;
     top:0px;
     left:0px;
-    width:100vw;
-    height:100vw;
-    transform:translateX(-100vw);
+    width:100%;
+    height:100%;
+    transform:translateX(-120vw);
     transition: transform 200ms ease-in-out;
     box-sizing: border-box;
 }

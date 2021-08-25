@@ -35,10 +35,8 @@
     background-color: var(--grey-1);
 }
 .page__main {
-    display: grid;
+    display: flex;
     width: 100%;
-    grid-template-columns: auto 1fr 20px;
-    grid-gap: 16px;
     place-items: center;
     background-color: var(--grey-1);
 }
@@ -87,8 +85,8 @@
     }
 
     .page__main {
-        grid-template-columns: auto 1fr 20px;
-        grid-gap: 40px;
+        grid-template-columns: auto 1fr;
+        
     }
     .page__footer {
         height: 130px;
@@ -101,7 +99,6 @@
 .page__footer {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-items: center;
     text-transform: uppercase;
     height: 80px;
@@ -111,7 +108,7 @@
     background-color: var(--grey-1);
 }
 .menu {
-    width:40px;
+    width:0px;
     background-color: var(--grey-1);
     overflow: hidden;
     height: 100%;
@@ -120,7 +117,8 @@
 .component {
     display: block;
     background-color: var(--white);
-    padding:20px;
+    padding:16px;
+    margin: 16px;
     width: 100%;
 
 }
