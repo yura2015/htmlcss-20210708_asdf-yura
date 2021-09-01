@@ -43,6 +43,7 @@
     height: 199;
     background-color:var(--white);
     border-radius: 8px;
+    box-sizing:border-box;
 }
 
 

@@ -28,9 +28,11 @@
                 <svg id="burger-menu-open" class="page__icon-burger">
                     <use xlink:href="../assets/images/sprite.svg#burger"></use>
                 </svg>             
-                <svg class="page__icon-logo">
-                    <use xlink:href="../assets/images/sprite.svg#logo"></use>
-                </svg>
+                <a href="../index.html" class="burger__href">
+                    <svg class="page__icon-logo">
+                        <use xlink:href="../assets/images/sprite.svg#logo"></use>
+                    </svg>
+                </a>
                 <div class="header__switch">
                     <svg class="header__switch-icon">
                         <use xlink:href="../assets/images/sprite.svg#sun"></use>
@@ -54,11 +56,18 @@
                 <div class="menu">
                     <div class="burger">
                         <div id="burger-menu" class="burger__menu">
-                            <svg id="burger-menu-close" class="burger__menu-close">
-                                <use xlink:href="../assets/images/sprite.svg#close-menu"></use>
-                            </svg>
+                            <div class="burger-benu__header">
+                                <svg id="burger-menu-close" class="burger__menu-close">
+                                    <use xlink:href="../assets/images/sprite.svg#close-menu"></use>
+                                </svg>
+                                <svg class="page__icon-logo">
+                                    <use xlink:href="../assets/images/sprite.svg#logo"></use>
+                                </svg>
+                            </div>
+                            <div class="tmp__divider"></div> 
                             <div class="burger__switch">
-                                <div class="burger__container-title">Dark mode</div> 
+                                <div class="burger__href">Dark mode</div>
+                                
                                 <div class="burger__toggler">
                                     <label class="toggler form__control">
                                         <input id="theme-changer-main" type="checkbox" class="toggler__input" name="toggler" value="1">
@@ -70,21 +79,22 @@
                                     </label>
                                 </div>
                             </div>
+                            <div class="tmp__divider"></div> 
                             <div class="burger__container">
                                 
                                 <div class="burger__container-title">Components</div>
-                                <a class="burger__container-href" href="./accordion.html">Accordion</a>
-                                <a class="burger__container-href" href="./avatar.html">Avatar </a>
-                                <a class="burger__container-href" href="./button.html">Button</a>
-                                <a class="burger__container-href" href="./calendar.html">Calendar</a>
-                                <a class="burger__container-href" href="./checkbox.html">Checkbox</a>
-                                <a class="burger__container-href" href="./histogram.html">Histogram</a>
-                                <a class="burger__container-href" href="./input.html">Input</a>
-                                <a class="burger__container-href" href="./modal.html">Modal</a>
-                                <a class="burger__container-href" href="./radio.html">Radio</a>
-                                <a class="burger__container-href" href="./skeleton.html">Skeleton</a>
-                                <a class="burger__container-href" href="./toggler.html">Toggler</a>
-                                <a class="burger__container-href" href="./tooltip.html">Tooltip</a>
+                                <a class="burger__href" href="./accordion.html">Accordion</a>
+                                <a class="burger__href" href="./avatar.html">Avatar </a>
+                                <a class="burger__href" href="./button.html">Button</a>
+                                <a class="burger__href" href="./calendar.html">Calendar</a>
+                                <a class="burger__href" href="./checkbox.html">Checkbox</a>
+                                <a class="burger__href" href="./histogram.html">Histogram</a>
+                                <a class="burger__href" href="./input.html">Input</a>
+                                <a class="burger__href" href="./modal.html">Modal</a>
+                                <a class="burger__href-active" href="./radio.html">Radio</a>
+                                <a class="burger__href" href="./skeleton.html">Skeleton</a>
+                                <a class="burger__href" href="./toggler.html">Toggler</a>
+                                <a class="burger__href" href="./tooltip.html">Tooltip</a>
                                 
                             </div>
                         </div>

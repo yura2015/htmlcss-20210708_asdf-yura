@@ -1,78 +1,83 @@
 /* Стилизация кнопки */
 
-.button
-{
-    padding: 0;
-    margin:0;
-    box-sizing: border-box;
-    box-shadow: none;
-    outline: none;
-    border: none;
-    background: none;
-    width: 189px;
-    height: 48px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: opacity 200ms ease-in-out, background 200ms ease-in-out;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    text-align: center;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
-    
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 auto;
+  flex-basis: 189px;
+  padding: 0 15px;
+  /*box-sizing: border-box;*/
+  box-shadow: none;
+  outline: none;
+  border: none;
+  background: none;
+  max-width: 189px;
+  height: 48px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: opacity 200ms ease-in-out, background 200ms ease-in-out;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: right;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
 }
-.button_primary
-{
-    color: var(--white);
-    background-color: var(--primary);
+.button_primary {
+  color: var(--white);
+  background-color: var(--primary);
 }
-.button_primary:hover 
-{
-    background-color: var(--primary-darken);
-}
-
-.button_primary:disabled
-{
-    opacity: 0.5;
-    cursor: default;
-    pointer-events: none;
+.button_primary:hover {
+  background-color: var(--primary-darken);
 }
 
-.button_secondary
-{
-    color: var(--white);
-    background-color: var(--secondary);
-}
-.button_secondary:hover 
-{
-    background-color: var(--secondary-darken);
+.button_primary:disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
 }
 
-.button_secondary:disabled 
-{
-    opacity: 0.5;
-    cursor: default;
-    pointer-events: none;
+.button_secondary {
+  color: var(--white);
+  background-color: var(--secondary);
+}
+.button_secondary:hover {
+  background-color: var(--secondary-darken);
 }
 
-.button_alternate
-{
-    color: var(--black);
-    border: 1px solid var(--grey-3);
-    
-}
-.button_alternate:hover 
-{
-    border: 1px solid var(--black);
+.button_secondary:disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
 }
 
-.button_alternate:disabled 
+.button_alternate {
+  color: var(--black);
+  border: 1px solid var(--grey-3);
+}
+
+.button_alternate:hover {
+  border: 1px solid var(--black);
+}
+
+.button_alternate:disabled {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+
+.buttons 
 {
-    opacity: 0.5;
-    cursor: default;
-    pointer-events: none;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(3 60px);
+  justify-content: center;
+  align-content: center;
+  gap: 10px 5px;
+  box-sizing: border-box;
+  margin: 0px;
 }

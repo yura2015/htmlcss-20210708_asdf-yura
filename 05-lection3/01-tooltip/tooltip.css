@@ -1,15 +1,17 @@
 
 .tooltip {
-    display: block;
+    display: inline-block;
     position:relative;
-    height: 100px;
+    margin:70px 0px 30px 75px;
 }
 
 .tooltip__trigger {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position:relative;
+    display: inline-block;
+    box-sizing:border-box;
     padding-top: 0px;
+    width: 24px;
+    height: 24px;
 }
 
 .tooltip__help {
@@ -29,6 +31,7 @@
     line-height: 24px;
     color: var(--grey-2);
     text-align: center;
+    pointer-events: none;
     display: none;
 
 }
@@ -43,6 +46,7 @@
 }
 .tooltip__trigger:hover ~ .tooltip__help {
     display: block;
+    pointer-events: all;
 }
 .tooltip__icon {
     fill: none;
